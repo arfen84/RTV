@@ -30,10 +30,14 @@
                             <strong>@Html.Encode(User.Identity.Name)</strong>
                             <span style="color:#ffffff"> | </span>
                             @Html.ActionLink("Log Out", "Logout", "Home")
+                            <span style="color:#ffffff"> | </span>
+                            @Html.ActionLink("Register", "Register", "Home")
                         }
                         else
                         {
-                            
+
+
+
                             @Html.ActionLink("Register", "Register", "Home")
                             <span style="color:#ffffff"> | </span>
                             @Html.ActionLink("Log In", "LogIn", "Home")
