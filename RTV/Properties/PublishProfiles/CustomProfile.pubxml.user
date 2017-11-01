@@ -6,17 +6,17 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\pc\Desktop</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\pc\Desktop\sklep</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
       <publishTime>10/24/2017 19:23:44</publishTime>
     </File>
     <File Include="App_Data/Sklep.mdf">
-      <publishTime>10/25/2017 22:21:32</publishTime>
+      <publishTime>11/01/2017 22:57:52</publishTime>
     </File>
     <File Include="App_Data/Sklep_log.ldf">
-      <publishTime>10/25/2017 22:21:32</publishTime>
+      <publishTime>11/01/2017 22:57:52</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>02/22/2013 07:43:40</publishTime>
@@ -32,6 +32,9 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/GridMvc.dll">
+      <publishTime>09/25/2013 14:34:54</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/30/2016 15:07:42</publishTime>
@@ -229,10 +232,10 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
       <publishTime>04/13/2017 15:47:48</publishTime>
     </File>
     <File Include="bin/RTV.dll">
-      <publishTime>10/25/2017 22:22:00</publishTime>
+      <publishTime>11/01/2017 22:58:33</publishTime>
     </File>
     <File Include="bin/RTV.pdb">
-      <publishTime>10/25/2017 22:22:00</publishTime>
+      <publishTime>11/01/2017 22:58:33</publishTime>
     </File>
     <File Include="bin/SimpleCrypto.dll">
       <publishTime>02/09/2014 03:05:48</publishTime>
@@ -267,8 +270,11 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
     <File Include="Content/bootstrap.min.css">
       <publishTime>10/24/2017 19:23:15</publishTime>
     </File>
+    <File Include="Content/Gridmvc.css">
+      <publishTime>11/01/2017 15:24:06</publishTime>
+    </File>
     <File Include="Content/Site.css">
-      <publishTime>10/24/2017 23:10:45</publishTime>
+      <publishTime>11/01/2017 20:57:27</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>10/24/2017 19:22:50</publishTime>
@@ -288,11 +294,59 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
     <File Include="Global.asax">
       <publishTime>10/24/2017 19:22:50</publishTime>
     </File>
+    <File Include="Grid.mvc.readme">
+      <publishTime>11/01/2017 15:24:06</publishTime>
+    </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>10/24/2017 19:23:15</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>10/24/2017 19:23:15</publishTime>
+    </File>
+    <File Include="Scripts/cldr.js">
+      <publishTime>11/01/2017 14:20:03</publishTime>
+    </File>
+    <File Include="Scripts/cldr/event.js">
+      <publishTime>11/01/2017 14:20:03</publishTime>
+    </File>
+    <File Include="Scripts/cldr/supplemental.js">
+      <publishTime>11/01/2017 14:20:03</publishTime>
+    </File>
+    <File Include="Scripts/cldr/unresolved.js">
+      <publishTime>11/01/2017 14:20:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/globalize/currency.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/globalize/date.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/globalize/message.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/globalize/number.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/globalize/plural.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/globalize/relative-time.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/globalize/unit.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.js">
+      <publishTime>11/01/2017 15:24:06</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.lang.ru.js">
+      <publishTime>11/01/2017 15:24:06</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.min.js">
+      <publishTime>11/01/2017 15:24:06</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>10/24/2017 19:23:16</publishTime>
@@ -302,6 +356,15 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
       <publishTime>10/24/2017 19:23:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.3.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.3.min.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.3.min.map">
+      <publishTime>11/01/2017 14:20:20</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>10/24/2017 19:23:38</publishTime>
@@ -314,6 +377,12 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
       <publishTime>10/24/2017 19:23:39</publishTime>
+    </File>
+    <File Include="Scripts/jszip.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
+    </File>
+    <File Include="Scripts/jszip.min.js">
+      <publishTime>11/01/2017 14:20:20</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>10/24/2017 19:23:37</publishTime>
@@ -342,8 +411,26 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>10/24/2017 19:22:50</publishTime>
     </File>
+    <File Include="Views/Shared/_Grid.cshtml">
+      <publishTime>11/01/2017 15:24:06</publishTime>
+    </File>
+    <File Include="Views/Shared/_GridPager.cshtml">
+      <publishTime>11/01/2017 15:24:06</publishTime>
+    </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/25/2017 22:07:39</publishTime>
+      <publishTime>11/01/2017 22:58:18</publishTime>
+    </File>
+    <File Include="Views/User/Create.cshtml">
+      <publishTime>11/01/2017 22:43:25</publishTime>
+    </File>
+    <File Include="Views/User/Delete.cshtml">
+      <publishTime>11/01/2017 22:50:08</publishTime>
+    </File>
+    <File Include="Views/User/Edit.cshtml">
+      <publishTime>11/01/2017 22:24:23</publishTime>
+    </File>
+    <File Include="Views/User/Index.cshtml">
+      <publishTime>11/01/2017 21:18:26</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>10/24/2017 19:22:50</publishTime>
@@ -352,7 +439,7 @@ Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu sieci 
       <publishTime>10/24/2017 19:22:50</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/25/2017 22:22:01</publishTime>
+      <publishTime>11/01/2017 22:52:28</publishTime>
     </File>
   </ItemGroup>
 </Project>

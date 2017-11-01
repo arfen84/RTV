@@ -30,5 +30,7 @@ namespace RTV.Models
         
         [Display(Name = "Nazwa użytkownika: ")]
         public string UserName { get; set; }
+        [Display(Name = "Funkcja: ")]
+        public String Role { get; set; }
     }
 }

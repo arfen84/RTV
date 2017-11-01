@@ -30,7 +30,7 @@ namespace RTV.Controllers
             if (IsValid(userr.Email, userr.Password))
             {
                 FormsAuthentication.SetAuthCookie(userr.Email, true);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "User");
             }
             else
             {

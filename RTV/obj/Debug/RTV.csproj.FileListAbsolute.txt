@@ -52,3 +52,8 @@ c:\users\pc\source\repos\RTV\RTV\obj\Debug\RTV.csprojResolveAssemblyReference.ca
 c:\users\pc\source\repos\RTV\RTV\obj\Debug\RTV.csproj.CoreCompileInputs.cache
 c:\users\pc\source\repos\RTV\RTV\obj\Debug\RTV.dll
 c:\users\pc\source\repos\RTV\RTV\obj\Debug\RTV.pdb
+C:\Users\pc\source\repos\RTV\RTV\obj\Debug\RTV.Migrations.InitialCreate.resources
+C:\Users\pc\source\repos\RTV\RTV\obj\Debug\RTV.csproj.GenerateResource.Cache
+C:\Users\pc\source\repos\RTV\RTV\obj\Debug\RTV.Migrations.RolePoleAdded.resources
+C:\Users\pc\source\repos\RTV\RTV\bin\GridMvc.dll
+C:\Users\pc\source\repos\RTV\RTV\obj\Debug\RTV.Migrations.RolePoleChanged.resources

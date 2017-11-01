@@ -23,16 +23,18 @@ textarea {
     max-width: 280px;
 }
 
-a {
-    color: #fff !important;
+ul.nav a, .navbar-header a.navbar-brand {
+    color: #fff;
     vertical-align: middle;
-
 }
 ul.navbar-nav {
     flex-direction: row;
     font-size: 20px;
-    color: #fff !important;
+    color: #fff;
 }
 .navbar-inverse .navbar-brand  {
     font-size: 28px;
 }
+
+.gridContainer a{color:#333;}
+.gridContainer a:hover{color:#999;}
