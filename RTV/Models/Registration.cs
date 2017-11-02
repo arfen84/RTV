@@ -5,11 +5,13 @@ using System.Web;
 
 namespace RTV.Models
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public partial class Registration
+    public partial class Registration 
     {
         [Key]
         public int UserId { get; set; }

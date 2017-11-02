@@ -7,7 +7,7 @@ namespace RTV.Migrations
     {
         public override void Up()
         {
-            AlterColumn("dbo.Registrations", "Role", c => c.Byte(nullable: false));
+            AlterColumn("dbo.Registrations", "Role", c => c.String());
         }
         
         public override void Down()

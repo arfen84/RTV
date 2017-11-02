@@ -1,4 +1,5 @@
-﻿using RTV.Models;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using RTV.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
@@ -13,6 +14,20 @@ namespace RTV.Controllers
     {
         public ActionResult Index()
         {
+            var Role = new IdentityRole();
+            Role.Name = "Admin";
+            using (var db2 = new Context())
+            {
+                db2.Roles.Add(Role);
+                db2.SaveChanges();
+            }
+            Role = new IdentityRole();
+            Role.Name = "User";
+            using (var db2 = new Context())
+            {
+                db2.Roles.Add(Role);
+                db2.SaveChanges();
+            }
             return View();
         }
 
