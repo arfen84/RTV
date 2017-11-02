@@ -19,7 +19,7 @@ namespace RTV.Models
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
-            //modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
+            modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
             modelBuilder.Entity<IdentityUserRole>().HasKey(r => new
             {
                 r.RoleId,
@@ -28,7 +28,7 @@ namespace RTV.Models
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             // IMPORTANT: we are mapping the entity User to the same table as the entity ApplicationUser
-            modelBuilder.Entity<IdentityRole>().ToTable("Role");
+           // modelBuilder.Entity<IdentityRole>().ToTable("Role");
             // throw new UnintentionalCodeFirstException();
         }
 
@@ -36,44 +36,4 @@ namespace RTV.Models
         public DbSet<IdentityRole> Roles { get; set; }
 
     }
-    //public class DXContext : DbContext
-    //{
-    //    public DXContext()
-    //        : base("name=Context") // connection string in the application configuration file.
-    //    {
-    //        Database.SetInitializer<DXContext>(null); // Remove default initializer
-    //        Configuration.LazyLoadingEnabled = false;
-    //        Configuration.ProxyCreationEnabled = false;
-    //    }
-
-    //    // Domain Model
-    //    public DbSet<IdentityRole> Roles { get; set; }
-    //    // ... other custom DbSets
-
-    //    public static DXContext Create()
-    //    {
-    //        return new DXContext();
-    //    }
-
-    //    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    //    {
-    //        base.OnModelCreating(modelBuilder);
-
-    //        modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
-    //        modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
-    //        modelBuilder.Entity<IdentityUserRole>().HasKey(r => new {
-    //            r.RoleId,
-    //            r.UserId
-    //        });
-    //        modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-
-    //        // IMPORTANT: we are mapping the entity User to the same table as the entity ApplicationUser
-    //        modelBuilder.Entity<IdentityRole>().ToTable("Role");
-    //    }
-
-    //    public DbQuery<T> Query<T>() where T : class
-    //    {
-    //        return Set<T>().AsNoTracking();
-    //    }
-    //}
 }

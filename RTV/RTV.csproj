@@ -218,10 +218,17 @@
     <Compile Include="Migrations\201711021559299_RoleClassAdded2.Designer.cs">
       <DependentUpon>201711021559299_RoleClassAdded2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711021909558_RoleClassAdded3.cs" />
+    <Compile Include="Migrations\201711021909558_RoleClassAdded3.Designer.cs">
+      <DependentUpon>201711021909558_RoleClassAdded3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711021941298_RoleClassAdded4.cs" />
+    <Compile Include="Migrations\201711021941298_RoleClassAdded4.Designer.cs">
+      <DependentUpon>201711021941298_RoleClassAdded4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\CustomAuthorisation.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -312,6 +319,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711021559299_RoleClassAdded2.resx">
       <DependentUpon>201711021559299_RoleClassAdded2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711021909558_RoleClassAdded3.resx">
+      <DependentUpon>201711021909558_RoleClassAdded3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711021941298_RoleClassAdded4.resx">
+      <DependentUpon>201711021941298_RoleClassAdded4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
