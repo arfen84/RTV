@@ -11,7 +11,7 @@ namespace RTV.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public partial class Registration : IdentityUser
+    public partial class Registration 
     {
         [Key]
         public int UserId { get; set; }

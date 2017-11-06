@@ -86,3 +86,4 @@ C:\Users\pc\source\repos\RTV\RTV\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\pc\source\repos\RTV\RTV\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\pc\source\repos\RTV\RTV\obj\Debug\RTV.Migrations.RoleClassAdded3.resources
 C:\Users\pc\source\repos\RTV\RTV\obj\Debug\RTV.Migrations.RoleClassAdded4.resources
+C:\Users\pc\source\repos\RTV\RTV\obj\Debug\RTV.Migrations.AdminSecured.resources

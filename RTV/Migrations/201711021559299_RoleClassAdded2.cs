@@ -17,17 +17,7 @@ namespace RTV.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            CreateTable(
-                "dbo.IdentityUserRole",
-                c => new
-                    {
-                        RoleId = c.String(nullable: false, maxLength: 128),
-                        UserId = c.String(nullable: false, maxLength: 128),
-                        IdentityRole_Id = c.String(maxLength: 128),
-                    })
-                .PrimaryKey(t => new { t.RoleId, t.UserId })
-                .ForeignKey("dbo.Role", t => t.IdentityRole_Id)
-                .Index(t => t.IdentityRole_Id);
+            
             
             CreateTable(
                 "dbo.IdentityUserLogin",

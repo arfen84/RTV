@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201711021941298_RoleClassAdded4.Designer.cs">
       <DependentUpon>201711021941298_RoleClassAdded4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711061253152_AdminSecured.cs" />
+    <Compile Include="Migrations\201711061253152_AdminSecured.Designer.cs">
+      <DependentUpon>201711061253152_AdminSecured.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\CustomAuthorisation.cs" />
@@ -325,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711021941298_RoleClassAdded4.resx">
       <DependentUpon>201711021941298_RoleClassAdded4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711061253152_AdminSecured.resx">
+      <DependentUpon>201711061253152_AdminSecured.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -100,6 +100,9 @@ namespace RTV.Controllers
                     user.UserName = Convert.ToString(collection["UserName"]);
                     user.Email = Convert.ToString(collection["Email"]);
                     user.Role = Convert.ToString(collection["Role"]);
+                    if (user.UserName == "Admininstrator" && user.Role == "User")
+                        { return RedirectToAction("Index"); }
+
                     if (Convert.ToString(collection["Password"]) != String.Empty)
                     {
                         var crypto = new SimpleCrypto.PBKDF2();
