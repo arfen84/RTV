@@ -194,6 +194,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -230,9 +231,26 @@
     <Compile Include="Migrations\201711061253152_AdminSecured.Designer.cs">
       <DependentUpon>201711061253152_AdminSecured.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711071835433_MonitorsAdded.cs" />
+    <Compile Include="Migrations\201711071835433_MonitorsAdded.Designer.cs">
+      <DependentUpon>201711071835433_MonitorsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711071856380_ProductsAdded.cs" />
+    <Compile Include="Migrations\201711071856380_ProductsAdded.Designer.cs">
+      <DependentUpon>201711071856380_ProductsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711072044433_ProductsAddedWithFields.cs" />
+    <Compile Include="Migrations\201711072044433_ProductsAddedWithFields.Designer.cs">
+      <DependentUpon>201711072044433_ProductsAddedWithFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711072109579_ProductsAddedWithFieldsPublic.cs" />
+    <Compile Include="Migrations\201711072109579_ProductsAddedWithFieldsPublic.Designer.cs">
+      <DependentUpon>201711072109579_ProductsAddedWithFieldsPublic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\CustomAuthorisation.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -307,6 +325,11 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\CreateMonitor.cshtml" />
+    <Content Include="Views\Product\Monitory.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710252021034_InitialCreate.resx">
@@ -333,6 +356,18 @@
     <EmbeddedResource Include="Migrations\201711061253152_AdminSecured.resx">
       <DependentUpon>201711061253152_AdminSecured.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071835433_MonitorsAdded.resx">
+      <DependentUpon>201711071835433_MonitorsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071856380_ProductsAdded.resx">
+      <DependentUpon>201711071856380_ProductsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711072044433_ProductsAddedWithFields.resx">
+      <DependentUpon>201711072044433_ProductsAddedWithFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711072109579_ProductsAddedWithFieldsPublic.resx">
+      <DependentUpon>201711072109579_ProductsAddedWithFieldsPublic.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -349,6 +384,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

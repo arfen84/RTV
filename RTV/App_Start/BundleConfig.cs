@@ -18,7 +18,7 @@ namespace RTV
             // gotowe do produkcji, użyj narzędzia do kompilowania ze strony https://modernizr.com, aby wybrać wyłącznie potrzebne testy.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-
+                     
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
@@ -26,6 +26,15 @@ namespace RTV
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                  "~/Content/Gridmvc.css",
+                  "~/Content/Gridmvc.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/gridmvc").Include(
+                  "~/Scripts/gridmvc.js",
+                  "~/Scripts/gridmvc.js"));
+
         }
     }
 }

@@ -84,3 +84,6 @@ C:\Users\pc\source\repos\RTV\RTV\bin\System.Net.Http.Primitives.xml
 C:\Users\pc\source\repos\RTV\RTV\obj\Release\RTV.csproj.App.config
 C:\Users\pc\source\repos\RTV\RTV\obj\Release\RTV.Migrations.RoleClassAdded.resources
 C:\Users\pc\source\repos\RTV\RTV\obj\Release\RTV.Migrations.RoleClassAdded2.resources
+C:\Users\pc\source\repos\RTV\RTV\obj\Release\RTV.Migrations.RoleClassAdded3.resources
+C:\Users\pc\source\repos\RTV\RTV\obj\Release\RTV.Migrations.RoleClassAdded4.resources
+C:\Users\pc\source\repos\RTV\RTV\obj\Release\RTV.Migrations.AdminSecured.resources

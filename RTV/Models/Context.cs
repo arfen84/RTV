@@ -20,11 +20,11 @@ namespace RTV.Models
 
             //modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
             //modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
-            modelBuilder.Entity<IdentityUserRole>().HasKey(r => new
-            {
-                r.RoleId,
-                r.UserId
-            });
+            //modelBuilder.Entity<IdentityUserRole>().HasKey(r => new
+            //{
+            //    r.RoleId,
+            //    r.UserId
+            //});
             //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             // IMPORTANT: we are mapping the entity User to the same table as the entity ApplicationUser
@@ -33,7 +33,9 @@ namespace RTV.Models
         }
 
         public DbSet<Registration> Registrations { get; set; }
-        public DbSet<IdentityRole> Roles { get; set; }
+        //public DbSet<IdentityRole> Roles { get; set; }
 
+        //public DbSet<Monitor> Monitory { get; set; }
+        public DbSet<Product> Product { get; set; }
     }
 }

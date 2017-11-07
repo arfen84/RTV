@@ -1,0 +1,30 @@
+﻿@model IEnumerable<RTV.Models.Product>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p>Kategorie: </p>
+<p>
+    @Html.ActionLink("Monitory", "Monitory")
+</p>
+<p>Wejdź do kategorii by utworzyć nowy produkt</p>
+
+<div class="gridContainer">
+    @Html.Grid(Model).Columns(columns =>
+   {
+       columns.Add(c => c.ProductName).Titled("Nazwa").Filterable(true);
+       columns.Add(c => c.Category).Titled("Kategoria").Filterable(true);
+       
+       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edit", "Edit", new { id = o.ProductId }));
+       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Delete", "Delete", new { id = o.ProductId }));
+       //      columns.Add(model => model.UserName).Titled("Name")
+       //.Filterable(true).Sanitized(false).Encoded(false).
+       //  RenderValueAs(o => Html.ActionLink(o.UserName, "Edit", "Admin", new { Id = o.UserId }, null).ToHtmlString()); ;
+   }).WithPaging(20).Sortable(true)
+    @*@Html.ActionLink("Add Product", "Create")*@
+</div>
+@Scripts.Render("~/Scripts/gridmvc.js") 

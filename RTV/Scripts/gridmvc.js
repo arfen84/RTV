@@ -387,12 +387,12 @@ GridMvc.lang.en = {
     filterValueLabel: "Value:",
     applyFilterButtonText: "Apply",
     filterSelectTypes: {
-        Equals: "Equals",
-        StartsWith: "StartsWith",
-        Contains: "Contains",
-        EndsWith: "EndsWith",
-        GreaterThan: "Greater than",
-        LessThan: "Less than"
+        Equals: "Równe",
+        StartsWith: "Zaczyna się od",
+        Contains: "Zawiera",
+        EndsWith: "Kończy się na",
+        GreaterThan: "Większe niż",
+        LessThan: "Mniejsze niż"
     },
     code: 'en',
     boolTrueLabel: "Yes",
