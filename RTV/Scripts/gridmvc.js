@@ -383,9 +383,9 @@ GridMvc = (function ($) {
 if (typeof (GridMvc.lang) == 'undefined')
     GridMvc.lang = {};
 GridMvc.lang.en = {
-    filterTypeLabel: "Type: ",
-    filterValueLabel: "Value:",
-    applyFilterButtonText: "Apply",
+    filterTypeLabel: "Typ: ",
+    filterValueLabel: "Wartość:",
+    applyFilterButtonText: "Zastosuj",
     filterSelectTypes: {
         Equals: "Równe",
         StartsWith: "Zaczyna się od",
@@ -395,9 +395,9 @@ GridMvc.lang.en = {
         LessThan: "Mniejsze niż"
     },
     code: 'en',
-    boolTrueLabel: "Yes",
-    boolFalseLabel: "No",
-    clearFilterLabel: "Clear filter"
+    boolTrueLabel: "Tak",
+    boolFalseLabel: "Nie",
+    clearFilterLabel: "Wyczyść filtr"
 };
 /***
 * ============= FILTER WIDGETS =============
@@ -524,7 +524,9 @@ NumberFilterWidget = (function ($) {
         this.container = container;
         this.lang = lang;
         this.typeName = typeName;
-        this.value = values.length > 0 ? values[0] : { filterType: 1, filterValue: "" };//support only one filter value
+        this.value = values.length > 0 ? values[0] : { filterType: 5, filterValue: "" };//support only one filter value
+        //alert(values[0]);
+        this.value2 = values.length > 0 ? values[1] : { filterType: 6, filterValue: "" };//support only one filter value
         this.renderWidget();
         this.registerEvents();
     };
@@ -542,7 +544,15 @@ NumberFilterWidget = (function ($) {
                         <label>' + this.lang.filterValueLabel + '</label>\
                         <input type="text" class="grid-filter-input form-control" value="' + this.value.filterValue + '" />\
                     </div>\
-                    <div class="grid-filter-buttons">\
+             <label>' + this.lang.filterTypeLabel + '</label>\
+                        <select class="grid-filter-type2 form-control">\
+                            <option value="1" ' + (this.value2.filterType == "1" ? "selected=\"selected\"" : "") + '>' + this.lang.filterSelectTypes.Equals + '</option>\
+                            <option value="5" ' + (this.value2.filterType == "5" ? "selected=\"selected\"" : "") + '>' + this.lang.filterSelectTypes.GreaterThan + '</option>\
+                            <option value="6" ' + (this.value2.filterType == "6" ? "selected=\"selected\"" : "") + '>' + this.lang.filterSelectTypes.LessThan + '</option>\
+                        </select>\
+            <label>' + this.lang.filterValueLabel + '</label>\
+            <input type="text" class="grid-filter-input2 form-control" value="' + this.value2.filterValue + '" />\
+                    <div class="grid-filter-buttons"><br>\
                         <button type="button" class="btn btn-primary grid-apply">' + this.lang.applyFilterButtonText + '</button>\
                     </div>';
         this.container.append(html);
@@ -553,8 +563,10 @@ NumberFilterWidget = (function ($) {
         var applyBtn = this.container.find(".grid-apply");
         applyBtn.click(function () {
             var type = $context.container.find(".grid-filter-type").val();
-            var value = $context.container.find(".grid-filter-input").val();
-            var filters = [{ filterType: type, filterValue: value }];
+            var type2 = $context.container.find(".grid-filter-type2").val();
+            var value = $context.container.find(".grid-filter-input").val(); 
+            var value2 = $context.container.find(".grid-filter-input2").val(); 
+            var filters = [{ filterType: type, filterValue: value }, { filterType: type2, filterValue: value2 }];
             $context.cb(filters);
         });
         var txt = this.container.find(".grid-filter-input");

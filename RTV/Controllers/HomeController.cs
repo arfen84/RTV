@@ -45,7 +45,7 @@ namespace RTV.Controllers
             if (IsValid(userr.Email, userr.Password))
             {
                 FormsAuthentication.SetAuthCookie(userr.Email, true);
-                return RedirectToAction("Index", "User");
+                return RedirectToAction("Index", "Product");
             }
             else
             {
@@ -119,7 +119,7 @@ namespace RTV.Controllers
                 var user = db.Registrations.FirstOrDefault(u => u.Email == email);
                 if (user != null)
                 {
-                    if (user.Password == crypto.Compute(password, user.PasswordSalt))
+                    if ((password != null) && (user.Password == crypto.Compute(password, user.PasswordSalt)))
                     {
                         IsValid = true;
                     }

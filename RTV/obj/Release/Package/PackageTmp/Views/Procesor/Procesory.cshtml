@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RTV.Models.Procesor>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Procesory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<img class="img-responsive" src="~/Content/procesor.jpg" style="width:100%;">
+<h2>Procesory</h2>
+<p>
+    @Html.ActionLink("< Pełna lista kategorii", "Index", "Product")
+
+</p>
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.Nazwa).Titled("Nazwa").Filterable(true);
+    columns.Add(c => c.Marka).Titled("Marka").Filterable(true);
+    columns.Add(c => c.Opis).Titled("Opis").Filterable(true);
+    columns.Add(c => c.Chlodzenie).Titled("Chlodzenie w zestawie").Filterable(true).RenderValueAs(data => data.Chlodzenie ? "Tak" : "Nie");
+    columns.Add(c => c.Mnoznik).Titled("Mnożnik odblokowany").Filterable(true).RenderValueAs(data => data.Mnoznik ? "Tak" : "Nie");
+    columns.Add(c => c.Rdzenie).Titled("Rdzenie").Filterable(true);
+    columns.Add(c => c.Gniazdo).Titled("Gniazdo").Filterable(true);
+    columns.Add(c => c.Linia).Titled("Linia").Filterable(true);
+    columns.Add(c => c.Stan).Titled("Stan").Filterable(true);
+    columns.Add(c => c.Cena).Titled("Cena").Filterable(true);
+    columns.Add(c => c.Sprzedany).Titled("Sprzedany").Filterable(true).RenderValueAs(data => data.Sprzedany ? "Tak" : "Nie");
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edytuj", "Edit", "Procesor", new { id = o.ProcesorId }, null));
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Usuń", "Delete", "Procesor", new { id = o.ProcesorId }, null));
+    //      columns.Add(model => model.UserName).Titled("Name")
+    //.Filterable(true).Sanitized(false).Encoded(false).
+    //  RenderValueAs(o => Html.ActionLink(o.UserName, "Edit", "Admin", new { Id = o.UserId }, null).ToHtmlString()); ;
+}).WithPaging(20).Sortable(true).WithMultipleFilters().EmptyText("Brak rekordów")
+@Html.ActionLink("Utworz nowy procesor", "Create")
+
+@*@{
+    var mystyle = string.Concat("<style scoped> .container {padding-left: 0 !important; margin-left: 20px !important;} </style>");
+}
+
+@MvcHtmlString.Create(mystyle)*@

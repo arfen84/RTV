@@ -1,0 +1,46 @@
+﻿@model IEnumerable<RTV.Models.Laptop>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Laptopy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<img class="img-responsive" src="~/Content/laptop.jpg" style="width:100%;">
+<h2>Laptopy</h2>
+
+<p>
+       @Html.ActionLink("< Pełna lista kategorii", "Index", "Product")
+
+</p>
+
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.Nazwa).Titled("Nazwa").Filterable(true);
+    columns.Add(c => c.Marka).Titled("Marka").Filterable(true);
+    columns.Add(c => c.Opis).Titled("Opis").Filterable(true);
+    columns.Add(c => c.Rozdzielczosc).Titled("Rozdzielczość").Filterable(true);
+    columns.Add(c => c.Przekatna).Titled("Przekątna").Filterable(true);
+    columns.Add(c => c.SeriaProcesora).Titled("Seria procesora").Filterable(true);
+    columns.Add(c => c.IloscRdzeni).Titled("Ilość rdzeni").Filterable(true);
+    columns.Add(c => c.RAM).Titled("RAM").Filterable(true);
+    columns.Add(c => c.PamiecGrafika).Titled("VRAM [GB]").Filterable(true);
+    columns.Add(c => c.Pojemnosc).Titled("Dysk [GB]").Filterable(true);
+    columns.Add(c => c.Stan).Titled("Stan").Filterable(true);
+    columns.Add(c => c.System).Titled("System").Filterable(true);
+    columns.Add(c => c.Zlacza).Titled("Złącza").Filterable(true);
+    columns.Add(c => c.Cena).Titled("Cena").Filterable(true);
+    columns.Add(c => c.Sprzedany).Titled("Sprzedany").Filterable(true).RenderValueAs(data => data.Sprzedany ? "Tak" : "Nie"); ;
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edytuj", "Edit", new { id = o.LaptopId }));
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Usuń", "Delete", new { id = o.LaptopId }));
+    //      columns.Add(model => model.UserName).Titled("Name")
+    //.Filterable(true).Sanitized(false).Encoded(false).
+    //  RenderValueAs(o => Html.ActionLink(o.UserName, "Edit", "Admin", new { Id = o.UserId }, null).ToHtmlString()); ;
+}).WithPaging(20).Sortable(true).WithMultipleFilters().EmptyText("Brak rekordów")
+@Html.ActionLink("Utworz nowy laptop", "CreateLaptop")
+
+@*@{
+    var mystyle = string.Concat("<style scoped> .container {padding-left: 0 !important; margin-left: 0px !important;} </style>");
+}
+
+@MvcHtmlString.Create(mystyle)*@

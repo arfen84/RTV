@@ -1,0 +1,45 @@
+﻿@model IEnumerable<RTV.Models.Grafika>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Karty graficzne";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<img class="img-responsive" src="~/Content/graficzna.jpg" style="width:100%;">
+<h2>Lista kart graficznych</h2>
+
+<p>
+       @Html.ActionLink("< Pełna lista kategorii", "Index", "Product")
+
+</p>
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.Nazwa).Titled("Nazwa").Filterable(true);
+    columns.Add(c => c.Marka).Titled("Marka").Filterable(true);
+    columns.Add(c => c.Opis).Titled("Opis").Filterable(true);
+    columns.Add(c => c.Chipset).Titled("Chipset").Filterable(true);
+    columns.Add(c => c.ProducentChipsetu).Titled("Producent Chipsetu").Filterable(true);
+    columns.Add(c => c.Laczenie).Titled("Łączenie").Filterable(true);
+    columns.Add(c => c.RAM).Titled("RAM").Filterable(true);
+	columns.Add(c => c.RodzajRAM).Titled("Rodzaj RAMu").Filterable(true);
+    columns.Add(c => c.Standard).Titled("Standard").Filterable(true);
+    columns.Add(c => c.Stan).Titled("Stan").Filterable(true);
+    columns.Add(c => c.Szyna).Titled("Szyna").Filterable(true);
+    columns.Add(c => c.Wyjscie).Titled("Wyjście").Filterable(true);
+    columns.Add(c => c.Zlacze).Titled("Złącze").Filterable(true);
+    columns.Add(c => c.Cena).Titled("Cena").Filterable(true);
+    columns.Add(c => c.Sprzedany).Titled("Sprzedany").Filterable(true).RenderValueAs(data => data.Sprzedany ? "Tak" : "Nie"); ;
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edytuj", "Edit", new { id = o.GrafikaId }));
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Usuń", "Delete", new { id = o.GrafikaId }));
+    //      columns.Add(model => model.UserName).Titled("Name")
+    //.Filterable(true).Sanitized(false).Encoded(false).
+    //  RenderValueAs(o => Html.ActionLink(o.UserName, "Edit", "Admin", new { Id = o.UserId }, null).ToHtmlString()); ;
+}).WithPaging(20).Sortable(true).WithMultipleFilters().EmptyText("Brak rekordów")
+@Html.ActionLink("Utworz nową kartę graficzną", "Create")
+
+@*@{
+    var mystyle = string.Concat("<style scoped> .container {padding-left: 0 !important; margin-left: 0px !important;} </style>");
+}
+
+@MvcHtmlString.Create(mystyle)*@

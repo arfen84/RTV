@@ -1,0 +1,43 @@
+﻿@model IEnumerable<RTV.Models.Zasilacz>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Zasilacze";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<img class="img-responsive" src="~/Content/zasilacz.jpg" style="width:100%;">
+<h2>Lista Zasilaczy</h2>
+
+<p>
+    @Html.ActionLink("< Pełna lista kategorii", "Index", "Product")
+
+</p>
+
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.Nazwa).Titled("Nazwa").Filterable(true);
+    columns.Add(c => c.Marka).Titled("Marka").Filterable(true);
+    columns.Add(c => c.Opis).Titled("Opis").Filterable(true);
+    columns.Add(c => c.Chlodzenie).Titled("Chlodzenie").Filterable(true);
+    columns.Add(c => c.Modularne).Titled("Modularne").Filterable(true);
+    columns.Add(c => c.PFC).Titled("PFC").Filterable(true);
+    columns.Add(c => c.Sprawnosc).Titled("Sprawnosc").Filterable(true);
+    columns.Add(c => c.Standard).Titled("Standard").Filterable(true);
+    columns.Add(c => c.Wentylator).Titled("Wentylator").Filterable(true);
+    columns.Add(c => c.Stan).Titled("Stan").Filterable(true);
+    columns.Add(c => c.Cena).Titled("Cena").Filterable(true);
+    columns.Add(c => c.Sprzedany).Titled("Sprzedany").Filterable(true).RenderValueAs(data => data.Sprzedany ? "Tak" : "Nie");
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edytuj", "Edit", "Zasilacz", new { id = o.ZasilaczId }, null));
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Usuń", "Delete", "Zasilacz", new { id = o.ZasilaczId }, null));
+    //      columns.Add(model => model.UserName).Titled("Name")
+    //.Filterable(true).Sanitized(false).Encoded(false).
+    //  RenderValueAs(o => Html.ActionLink(o.UserName, "Edit", "Admin", new { Id = o.UserId }, null).ToHtmlString()); ;
+}).WithPaging(20).Sortable(true).WithMultipleFilters().EmptyText("Brak rekordów")
+@Html.ActionLink("Utworz nowy zasilacz", "Create")
+
+@*@{
+    var mystyle = string.Concat("<style scoped> .container {padding-left: 0 !important; margin-left: 20px !important;} </style>");
+}
+
+@MvcHtmlString.Create(mystyle)*@

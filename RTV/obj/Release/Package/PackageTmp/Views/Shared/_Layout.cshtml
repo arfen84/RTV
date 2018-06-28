@@ -4,52 +4,62 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title — RTV</title>
+    <title>@ViewBag.Title — Sklep komputerowy</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    @*<script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>*@
-    <script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery-2.2.3.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/gridmvc.js")" type="text/javascript"></script>
+	
+	<style>
+	body {
+    background-image: url('/Content/tlo.jpg');
+    margin: 0;
+	background-repeat: no-repeat;
+}
+	</style>
 </head>
-<body>
+<body >
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Sklep RTV", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-
+                </button>*@
+                @Html.ActionLink("Sklep komputerowy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @if (Request.IsAuthenticated)
+                {
+                    <strong>@Html.Encode(User.Identity.Name)</strong>
+                            <span style="color:#000"> | </span>
+                            @Html.ActionLink("Wyloguj", "Logout", "Home")
+                    <span style="color:#000"> | </span>
+                    @Html.ActionLink("Produkty", "Index", "Product")
+                    <span style="color:#000"> | </span>
+                    @Html.ActionLink("Użytkownicy", "Index", "User")
+                           <!-- <span style="color:#ffffff"> | </span>-->
+                    /*Html.ActionLink("Register", "Register", "Home")*/
+                }
+                else
+                {
+                    @*@Html.ActionLink("Register", "Register", "Home")*@
+                    @*<span style="color:#ffffff"> | </span>*@
+                    @Html.ActionLink("Zaloguj", "LogIn", "Home")
+                }
                
             </div>
-            <div class="navbar-collapse collapse">
+            @*<div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     
-                        @if (Request.IsAuthenticated)
-                        {
-                            <strong>@Html.Encode(User.Identity.Name)</strong>
-                            <span style="color:#ffffff"> | </span>
-                            @Html.ActionLink("Log Out", "Logout", "Home")
-                           <!-- <span style="color:#ffffff"> | </span>-->
-                         /*Html.ActionLink("Register", "Register", "Home")*/ 
-                        }
-                        else
-                        {
-
-
-
-                            @*@Html.ActionLink("Register", "Register", "Home")*@
-                            @*<span style="color:#ffffff"> | </span>*@
-                            @Html.ActionLink("Log In", "LogIn", "Home")
-                        }
+                       
                     <span style="color:#ffffff"> | </span>
                     
                    
                   
                 </ul>
-            </div>
+            </div>*@
         </div>
     </div>
     <div class="container body-content">

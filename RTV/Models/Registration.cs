@@ -18,7 +18,7 @@ namespace RTV.Models
         [Required]
         [EmailAddress]
         [StringLength(150)]
-        [Display(Name = "Email Address: ")]
+        [Display(Name = "Email: ")]
         public string Email { get; set; }
 
         [Required]

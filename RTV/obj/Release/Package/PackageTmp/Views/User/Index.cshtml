@@ -2,29 +2,29 @@
 @using GridMvc.Html
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Użytkownicy";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Lista użytkowników systemu</h2>
 
 <div>
-    <h4>Registration</h4>
     <hr />
     <div class="gridContainer">
         @Html.Grid(Model).Columns(columns =>
    {
        columns.Add(c => c.Email).Titled("Email").Filterable(true);
-       columns.Add(c => c.UserName).Titled("Username").Filterable(true);
-       columns.Add(c => c.Role).Titled("Role").Filterable(true);
-       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edit", "Edit", new { id = o.UserId }));
-       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Delete", "Delete", new { id = o.UserId }));
+       columns.Add(c => c.UserName).Titled("Użytkownik").Filterable(true);
+       columns.Add(c => c.Role).Titled("Rola").Filterable(true);
+       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edycja", "Edit", new { id = o.UserId }));
+       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Usuń", "Delete", new { id = o.UserId }));
        //      columns.Add(model => model.UserName).Titled("Name")
        //.Filterable(true).Sanitized(false).Encoded(false).
        //  RenderValueAs(o => Html.ActionLink(o.UserName, "Edit", "Admin", new { Id = o.UserId }, null).ToHtmlString()); ;
-   }).WithPaging(20).Sortable(true)
-        @Html.ActionLink("Add User", "Create")
+   }).WithPaging(20).Sortable(true).EmptyText("Brak rekordów")
+        @Html.ActionLink("Dodaj użytkownika", "Create")
     </div>
 </div>
+@Scripts.Render("~/Scripts/gridmvc.js") 
 
 

@@ -193,9 +193,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DrukarkaController.cs" />
+    <Compile Include="Controllers\GrafikaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LaptopController.cs" />
+    <Compile Include="Controllers\MonitorController.cs" />
+    <Compile Include="Controllers\PlytaController.cs" />
+    <Compile Include="Controllers\ProcesorController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RAMController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\ZasilaczController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -246,6 +254,118 @@
     <Compile Include="Migrations\201711072109579_ProductsAddedWithFieldsPublic.cs" />
     <Compile Include="Migrations\201711072109579_ProductsAddedWithFieldsPublic.Designer.cs">
       <DependentUpon>201711072109579_ProductsAddedWithFieldsPublic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711072301353_ProductsAddedWithDiffrentClasses.cs" />
+    <Compile Include="Migrations\201711072301353_ProductsAddedWithDiffrentClasses.Designer.cs">
+      <DependentUpon>201711072301353_ProductsAddedWithDiffrentClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711072327201_AddedLaptops.cs" />
+    <Compile Include="Migrations\201711072327201_AddedLaptops.Designer.cs">
+      <DependentUpon>201711072327201_AddedLaptops.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080011595_AddedLaptopsEdited.cs" />
+    <Compile Include="Migrations\201711080011595_AddedLaptopsEdited.Designer.cs">
+      <DependentUpon>201711080011595_AddedLaptopsEdited.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080023343_AddedLaptopsEdited2.cs" />
+    <Compile Include="Migrations\201711080023343_AddedLaptopsEdited2.Designer.cs">
+      <DependentUpon>201711080023343_AddedLaptopsEdited2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080029350_AddedLaptopsEdited3.cs" />
+    <Compile Include="Migrations\201711080029350_AddedLaptopsEdited3.Designer.cs">
+      <DependentUpon>201711080029350_AddedLaptopsEdited3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080032045_AddedLaptopsEdited4.cs" />
+    <Compile Include="Migrations\201711080032045_AddedLaptopsEdited4.Designer.cs">
+      <DependentUpon>201711080032045_AddedLaptopsEdited4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080035209_AddedLaptopsEdited5.cs" />
+    <Compile Include="Migrations\201711080035209_AddedLaptopsEdited5.Designer.cs">
+      <DependentUpon>201711080035209_AddedLaptopsEdited5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080037298_AddedLaptopsEdited6.cs" />
+    <Compile Include="Migrations\201711080037298_AddedLaptopsEdited6.Designer.cs">
+      <DependentUpon>201711080037298_AddedLaptopsEdited6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080042564_AddedLaptopsEdited7.cs" />
+    <Compile Include="Migrations\201711080042564_AddedLaptopsEdited7.Designer.cs">
+      <DependentUpon>201711080042564_AddedLaptopsEdited7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080048186_AddedLaptopsEdited8.cs" />
+    <Compile Include="Migrations\201711080048186_AddedLaptopsEdited8.Designer.cs">
+      <DependentUpon>201711080048186_AddedLaptopsEdited8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080053028_AddedLaptopsEdited9.cs" />
+    <Compile Include="Migrations\201711080053028_AddedLaptopsEdited9.Designer.cs">
+      <DependentUpon>201711080053028_AddedLaptopsEdited9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080142583_AddedLaptopsEdited10.cs" />
+    <Compile Include="Migrations\201711080142583_AddedLaptopsEdited10.Designer.cs">
+      <DependentUpon>201711080142583_AddedLaptopsEdited10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080147478_AddedLaptopsEdited11.cs" />
+    <Compile Include="Migrations\201711080147478_AddedLaptopsEdited11.Designer.cs">
+      <DependentUpon>201711080147478_AddedLaptopsEdited11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080149577_AddedLaptopsEdited12.cs" />
+    <Compile Include="Migrations\201711080149577_AddedLaptopsEdited12.Designer.cs">
+      <DependentUpon>201711080149577_AddedLaptopsEdited12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080200504_AddedLaptopsEdited13.cs" />
+    <Compile Include="Migrations\201711080200504_AddedLaptopsEdited13.Designer.cs">
+      <DependentUpon>201711080200504_AddedLaptopsEdited13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080219177_AddedLaptopsEdited14.cs" />
+    <Compile Include="Migrations\201711080219177_AddedLaptopsEdited14.Designer.cs">
+      <DependentUpon>201711080219177_AddedLaptopsEdited14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080223106_AddedLaptopsEdited15.cs" />
+    <Compile Include="Migrations\201711080223106_AddedLaptopsEdited15.Designer.cs">
+      <DependentUpon>201711080223106_AddedLaptopsEdited15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080226178_AddedLaptopsEdited16.cs" />
+    <Compile Include="Migrations\201711080226178_AddedLaptopsEdited16.Designer.cs">
+      <DependentUpon>201711080226178_AddedLaptopsEdited16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080257263_AddedLaptopsEdited17.cs" />
+    <Compile Include="Migrations\201711080257263_AddedLaptopsEdited17.Designer.cs">
+      <DependentUpon>201711080257263_AddedLaptopsEdited17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081150001_DrukarkaAdded.cs" />
+    <Compile Include="Migrations\201711081150001_DrukarkaAdded.Designer.cs">
+      <DependentUpon>201711081150001_DrukarkaAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081610216_LaptopFix.cs" />
+    <Compile Include="Migrations\201711081610216_LaptopFix.Designer.cs">
+      <DependentUpon>201711081610216_LaptopFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081612462_LaptopFix2.cs" />
+    <Compile Include="Migrations\201711081612462_LaptopFix2.Designer.cs">
+      <DependentUpon>201711081612462_LaptopFix2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711090202458_LaptopFix3.cs" />
+    <Compile Include="Migrations\201711090202458_LaptopFix3.Designer.cs">
+      <DependentUpon>201711090202458_LaptopFix3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711151716511_noweProdukty.cs" />
+    <Compile Include="Migrations\201711151716511_noweProdukty.Designer.cs">
+      <DependentUpon>201711151716511_noweProdukty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711151737585_noweProdukty2.cs" />
+    <Compile Include="Migrations\201711151737585_noweProdukty2.Designer.cs">
+      <DependentUpon>201711151737585_noweProdukty2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711151738366_noweProdukty3.cs" />
+    <Compile Include="Migrations\201711151738366_noweProdukty3.Designer.cs">
+      <DependentUpon>201711151738366_noweProdukty3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711151741518_noweProdukty4.cs" />
+    <Compile Include="Migrations\201711151741518_noweProdukty4.Designer.cs">
+      <DependentUpon>201711151741518_noweProdukty4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711151944445_noweProdukty5.cs" />
+    <Compile Include="Migrations\201711151944445_noweProdukty5.Designer.cs">
+      <DependentUpon>201711151944445_noweProdukty5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
@@ -326,10 +446,39 @@
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
-    <Content Include="Views\Product\CreateMonitor.cshtml" />
-    <Content Include="Views\Product\Monitory.cshtml" />
-    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Monitor\CreateMonitor.cshtml" />
+    <Content Include="Views\Monitor\Monitory.cshtml" />
+    <Content Include="Views\Monitor\EditMonitor.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Laptop\Laptopy.cshtml" />
+    <Content Include="Views\Drukarka\EditDrukarka.cshtml" />
+    <Content Include="Views\Drukarka\CreateDrukarka.cshtml" />
+    <Content Include="Views\Drukarka\Drukarki.cshtml" />
+    <Content Include="Views\Monitor\Delete.cshtml" />
+    <Content Include="Views\Drukarka\Delete.cshtml" />
+    <Content Include="Views\Laptop\CreateLaptop.cshtml" />
+    <Content Include="Views\Laptop\Edit.cshtml" />
+    <Content Include="Views\Laptop\Delete.cshtml" />
+    <Content Include="Views\Grafika\Graficzne.cshtml" />
+    <Content Include="Views\Grafika\Create.cshtml" />
+    <Content Include="Views\Grafika\Edit.cshtml" />
+    <Content Include="Views\Grafika\Delete.cshtml" />
+    <Content Include="Views\Procesor\Delete.cshtml" />
+    <Content Include="Views\Procesor\Edit.cshtml" />
+    <Content Include="Views\Procesor\Create.cshtml" />
+    <Content Include="Views\Procesor\Procesory.cshtml" />
+    <Content Include="Views\Plyta\Delete.cshtml" />
+    <Content Include="Views\Plyta\Edit.cshtml" />
+    <Content Include="Views\Plyta\Create.cshtml" />
+    <Content Include="Views\Plyta\Plyty.cshtml" />
+    <Content Include="Views\RAM\Delete.cshtml" />
+    <Content Include="Views\RAM\Edit.cshtml" />
+    <Content Include="Views\RAM\Create.cshtml" />
+    <Content Include="Views\RAM\Pamieci.cshtml" />
+    <Content Include="Views\Zasilacz\Delete.cshtml" />
+    <Content Include="Views\Zasilacz\Edit.cshtml" />
+    <Content Include="Views\Zasilacz\Create.cshtml" />
+    <Content Include="Views\Zasilacz\Zasilacze.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710252021034_InitialCreate.resx">
@@ -367,6 +516,90 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711072109579_ProductsAddedWithFieldsPublic.resx">
       <DependentUpon>201711072109579_ProductsAddedWithFieldsPublic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711072301353_ProductsAddedWithDiffrentClasses.resx">
+      <DependentUpon>201711072301353_ProductsAddedWithDiffrentClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711072327201_AddedLaptops.resx">
+      <DependentUpon>201711072327201_AddedLaptops.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080011595_AddedLaptopsEdited.resx">
+      <DependentUpon>201711080011595_AddedLaptopsEdited.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080023343_AddedLaptopsEdited2.resx">
+      <DependentUpon>201711080023343_AddedLaptopsEdited2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080029350_AddedLaptopsEdited3.resx">
+      <DependentUpon>201711080029350_AddedLaptopsEdited3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080032045_AddedLaptopsEdited4.resx">
+      <DependentUpon>201711080032045_AddedLaptopsEdited4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080035209_AddedLaptopsEdited5.resx">
+      <DependentUpon>201711080035209_AddedLaptopsEdited5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080037298_AddedLaptopsEdited6.resx">
+      <DependentUpon>201711080037298_AddedLaptopsEdited6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080042564_AddedLaptopsEdited7.resx">
+      <DependentUpon>201711080042564_AddedLaptopsEdited7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080048186_AddedLaptopsEdited8.resx">
+      <DependentUpon>201711080048186_AddedLaptopsEdited8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080053028_AddedLaptopsEdited9.resx">
+      <DependentUpon>201711080053028_AddedLaptopsEdited9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080142583_AddedLaptopsEdited10.resx">
+      <DependentUpon>201711080142583_AddedLaptopsEdited10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080147478_AddedLaptopsEdited11.resx">
+      <DependentUpon>201711080147478_AddedLaptopsEdited11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080149577_AddedLaptopsEdited12.resx">
+      <DependentUpon>201711080149577_AddedLaptopsEdited12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080200504_AddedLaptopsEdited13.resx">
+      <DependentUpon>201711080200504_AddedLaptopsEdited13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080219177_AddedLaptopsEdited14.resx">
+      <DependentUpon>201711080219177_AddedLaptopsEdited14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080223106_AddedLaptopsEdited15.resx">
+      <DependentUpon>201711080223106_AddedLaptopsEdited15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080226178_AddedLaptopsEdited16.resx">
+      <DependentUpon>201711080226178_AddedLaptopsEdited16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080257263_AddedLaptopsEdited17.resx">
+      <DependentUpon>201711080257263_AddedLaptopsEdited17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081150001_DrukarkaAdded.resx">
+      <DependentUpon>201711081150001_DrukarkaAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081610216_LaptopFix.resx">
+      <DependentUpon>201711081610216_LaptopFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081612462_LaptopFix2.resx">
+      <DependentUpon>201711081612462_LaptopFix2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711090202458_LaptopFix3.resx">
+      <DependentUpon>201711090202458_LaptopFix3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711151716511_noweProdukty.resx">
+      <DependentUpon>201711151716511_noweProdukty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711151737585_noweProdukty2.resx">
+      <DependentUpon>201711151737585_noweProdukty2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711151738366_noweProdukty3.resx">
+      <DependentUpon>201711151738366_noweProdukty3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711151741518_noweProdukty4.resx">
+      <DependentUpon>201711151741518_noweProdukty4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711151944445_noweProdukty5.resx">
+      <DependentUpon>201711151944445_noweProdukty5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,62 @@
+﻿@model RTV.Models.RAM
+
+@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "Pamięci RAM";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<img class="img-responsive" src="~/Content/RAM.jpg" style="width:100%;">
+<h2>Usuń Pamięci RAM</h2>
+
+<p>
+    @Html.ActionLink("< Pełna lista produktów", "Index", "Product")
+
+</p>
+
+    <h3>Czy jesteś pewien?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+           
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nazwa)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Cena)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Cena)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Marka)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Marka)
+            </dd>
+    
+           
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Usuń" class="btn btn-default" /> |
+                @Html.ActionLink("Wróć do listy pamięci RAM", "Pamieci")
+            </div>
+        }
+    </div>
+

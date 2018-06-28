@@ -18,6 +18,46 @@ namespace RTV.Models
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Monitor>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Monitory");
+            });
+            modelBuilder.Entity<Drukarka>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Drukarki");
+            });
+            modelBuilder.Entity<Laptop>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Laptopy");
+            });
+            modelBuilder.Entity<Grafika>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Graficzne");
+            });
+            modelBuilder.Entity<Procesor>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Procesory");
+            });
+            modelBuilder.Entity<Plyta>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Plyty");
+            });
+            modelBuilder.Entity<RAM>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("RAMy");
+            });
+            modelBuilder.Entity<Zasilacz>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Zasilacze");
+            });
             //modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
             //modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
             //modelBuilder.Entity<IdentityUserRole>().HasKey(r => new
@@ -35,7 +75,14 @@ namespace RTV.Models
         public DbSet<Registration> Registrations { get; set; }
         //public DbSet<IdentityRole> Roles { get; set; }
 
-        //public DbSet<Monitor> Monitory { get; set; }
-        public DbSet<Product> Product { get; set; }
+        public DbSet<Monitor> Monitors { get; set; }
+        public DbSet<Drukarka> Drukarki { get; set; }
+        public DbSet<Laptop> Laptops { get; set; }
+        public DbSet<Grafika> Graficzne { get; set; }
+        public DbSet<Procesor> Procesory { get; set; }
+        public DbSet<Plyta> Plyty { get; set; }
+        public DbSet<RAM> RAM { get; set; }
+        public DbSet<Zasilacz> Zasilacze { get; set; }
+        //public DbSet<Product> Products { get; set; }
     }
 }

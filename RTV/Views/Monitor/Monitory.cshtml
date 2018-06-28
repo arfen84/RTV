@@ -1,0 +1,42 @@
+﻿@model IEnumerable<RTV.Models.Monitor>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Monitory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<img class="img-responsive" src="~/Content/monitor.jpg" style="width:100%;">
+<h2>Monitory</h2>
+
+<p>
+    @Html.ActionLink("< Pełna lista kategorii", "Index", "Product")
+   
+</p>
+
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.Nazwa).Titled("Nazwa").Filterable(true);
+    columns.Add(c => c.Marka).Titled("Marka").Filterable(true);
+    columns.Add(c => c.Opis).Titled("Opis").Filterable(true);
+    columns.Add(c => c.Rozdzielczosc).Titled("Rozdzielczość").Filterable(true);
+    columns.Add(c => c.Przekatna).Titled("Przekątna").Filterable(true);
+    columns.Add(c => c.czas_reakcji).Titled("Czas reakcji").Filterable(true);
+    columns.Add(c => c.Jasnosc).Titled("Jasność").Filterable(true);
+    columns.Add(c => c.Matryca).Titled("Matryca").Filterable(true);
+    columns.Add(c => c.Stan).Titled("Stan").Filterable(true);
+    columns.Add(c => c.Cena).Titled("Cena").Filterable(true);
+    columns.Add(c => c.Sprzedany).Titled("Sprzedany").Filterable(true).RenderValueAs(data => data.Sprzedany ? "Tak" : "Nie");
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Edytuj", "Edit", "Monitor", new { id = o.MonitorId }, null));
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(o => Html.ActionLink("Usuń", "Delete", "Monitor", new { id = o.MonitorId }, null));
+    //      columns.Add(model => model.UserName).Titled("Name")
+    //.Filterable(true).Sanitized(false).Encoded(false).
+    //  RenderValueAs(o => Html.ActionLink(o.UserName, "Edit", "Admin", new { Id = o.UserId }, null).ToHtmlString()); ;
+}).WithPaging(20).Sortable(true).WithMultipleFilters().EmptyText("Brak rekordów")
+@Html.ActionLink("Utworz nowy monitor", "CreateMonitor", "Monitor")
+
+@*@{
+    var mystyle = string.Concat("<style scoped> .container {padding-left: 0 !important; margin-left: 20px !important;} </style>");
+}
+
+@MvcHtmlString.Create(mystyle)*@
